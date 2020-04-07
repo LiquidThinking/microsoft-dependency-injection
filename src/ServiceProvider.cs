@@ -30,14 +30,8 @@ namespace Unity.Microsoft.DependencyInjection
                 throw new ObjectDisposedException(nameof(IServiceProvider));
             }
 
-            try
-            {
-                return _container.Resolve(serviceType);
-            }
-            catch  { /* Ignore */}
-
-            return null;
-        }
+			return _container.Resolve(serviceType);
+		}
 
         #endregion
 
